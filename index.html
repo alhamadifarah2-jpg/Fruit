@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>فوائد الفواكه | موقع بسيط</title>
+  <meta name="description" content="موقع تعريفي بسيط يشرح فوائد الفواكه" />
+
+  <!-- ================= CSS ================= -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1b33;
+      --card:#121f3b;
+      --text:#eaf0ff;
+      --muted:#b8c3e6;
+      --accent:#5dd6c6;
+      --accent2:#7aa6ff;
+      --border:rgba(255,255,255,.10);
+      --shadow:0 14px 40px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(93,214,198,.18), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(122,166,255,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+
+    .container{width:min(1100px,92%);margin:auto}
+
+    /* ===== Header ===== */
+    .header{padding:18px 0 40px}
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    .brand{color:var(--text);text-decoration:none;font-weight:800}
+    .nav-links{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+    .nav-links a{
+      color:var(--muted);text-decoration:none;
+      padding:6px 10px;border-radius:8px;
+    }
+    .nav-links a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+
+    .hero{
+      display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:20px;
+    }
+    .hero-text,.hero-card{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    .hero-text h1{margin-top:0}
+    .hero-text p{color:var(--muted);line-height:1.8}
+
+    .btn{
+      display:inline-block;padding:10px 14px;border-radius:12px;
+      text-decoration:none;font-weight:700;margin-left:6px;
+    }
+    .primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#061020;
+    }
+    .ghost{
+      border:1px solid var(--border);
+      color:var(--text);
+    }
+
+    /* ===== Sections ===== */
+    .section{padding:26px 0}
+    .section-title{margin-bottom:8px}
+    .section-subtitle{color:var(--muted);margin-bottom:16px}
+
+    .grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+      box-shadow:0 10px 24px rgba(0,0,0,.25);
+    }
+    .card p{color:var(--muted);line-height:1.7}
+
+    .tag{
+      display:inline-block;margin-top:10px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      font-size:.85rem;
+    }
+
+    .controls{margin-bottom:12px}
+    .input{
+      width:100%;padding:10px;border-radius:10px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);color:var(--text);
+    }
+
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--border);
+      padding:16px 0;margin-top:20px;
+      background:rgba(0,0,0,.2);
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="#">🍎 فوائد الفواكه</a>
+      <ul class="nav-links">
+        <li><a href="#benefits">الفوائد</a></li>
+        <li><a href="#fruits">الفواكه</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>الفواكه غذاء طبيعي لصحة أفضل</h1>
+        <p>
+          الفواكه مصدر غني بالفيتامينات والمعادن والألياف،
+          وتساهم في دعم المناعة وصحة القلب والهضم.
+        </p>
+        <a href="#fruits" class="btn primary">استكشف الفواكه</a>
+        <a href="#benefits" class="btn ghost">فوائدها</a>
+      </div>
+
+      <div class="hero-card">
+        <h3>ملخص سريع</h3>
+        <ul>
+          <li>✔️ تقوي المناعة</li>
+          <li>✔️ تحسن الهضم</li>
+          <li>✔️ غنية بالألياف</li>
+          <li>✔️ ترطيب طبيعي</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- فوائد -->
+  <section id="benefits" class="section">
+    <h2 class="section-title">فوائد الفواكه</h2>
+    <div class="grid">
+      <div class="card"><h3>💪 المناعة</h3><p>غنية بفيتامين C ومضادات الأكسدة.</p></div>
+      <div class="card"><h3>🫀 القلب</h3><p>تساعد في تقليل الكوليسترول.</p></div>
+      <div class="card"><h3>🌿 الهضم</h3><p>الألياف تحسن عمل الجهاز الهضمي.</p></div>
+    </div>
+  </section>
+
+  <!-- الفواكه -->
+  <section id="fruits" class="section">
+    <h2 class="section-title">أمثلة فواكه</h2>
+
+    <div class="controls">
+      <input id="search" class="input" placeholder="ابحث عن فاكهة..." />
+    </div>
+
+    <div class="grid" id="fruitGrid">
+      <div class="card fruit" data-name="تفاح"><h3>🍏 تفاح</h3><p>غني بالألياف.</p></div>
+      <div class="card fruit" data-name="موز"><h3>🍌 موز</h3><p>مصدر للبوتاسيوم.</p></div>
+      <div class="card fruit" data-name="برتقال"><h3>🍊 برتقال</h3><p>غني بفيتامين C.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> فوائد الفواكه</p>
+  </div>
+</footer>
+
+<!-- ================= JavaScript ================= -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const search = document.getElementById("search");
+  const cards = document.querySelectorAll(".fruit");
+
+  search.addEventListener("input", () => {
+    const value = search.value.toLowerCase();
+    cards.forEach(card => {
+      card.style.display =
+        card.dataset.name.toLowerCase().includes(value) ? "" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
